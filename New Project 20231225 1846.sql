@@ -1,0 +1,115 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.25a
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema chargingvehicle
+--
+
+CREATE DATABASE IF NOT EXISTS chargingvehicle;
+USE chargingvehicle;
+
+--
+-- Definition of table `emergency`
+--
+
+DROP TABLE IF EXISTS `emergency`;
+CREATE TABLE `emergency` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userid` longtext,
+  `amount` longtext,
+  `time` longtext,
+  `status` longtext,
+  `phash` longtext,
+  `ahash` longtext,
+  `date` longtext,
+  `category` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=FIXED;
+
+--
+-- Dumping data for table `emergency`
+--
+
+/*!40000 ALTER TABLE `emergency` DISABLE KEYS */;
+INSERT INTO `emergency` (`id`,`userid`,`amount`,`time`,`status`,`phash`,`ahash`,`date`,`category`) VALUES 
+ (1,'hxpkhLK29JQA6TtrxrHgdEMmMQ==','8dvJzirLW4Qhai6Ba/J9YFivXRNzxg==','O7RxfvlEHbngGAGGr2IXV9Fb57SdFd8B','Stored ','bdafbed60f2693be1b119f8839571a5b64b82b3a01da7464045d7a342857b68d','065bffc42e1c2f550af2b7a328b447c1a4b54f02d770ef0dad55f0e637eccc5d','GtPwZeKN3VZ5+SI9d2cUOrqfWn6L/9Ux0Ur2',NULL),
+ (2,'B9EfUWk9l2MWIcEJSnHfynnF5A==','9Tv2K7O9WD5nBvsm6pLljXcRIXEAmg==','uEU5Pt+Hgg2E+X+x5MtuysBV4vKjkEii','Stored ','4d0a997ea7eaa67d572875973c59c70d98d9e65fa538a7b52773e23b873d67a6','3fcb8ff4c405cfbe9fd03d9c86cf381b5b3d2206b7f1fd9407eec8d55e4c4b31','3PkpFkq4MbWLNYctAIlqULKKcphT8DZFqGnA',NULL),
+ (3,'odQZDdhgnsCHkrHY1Mhg3pTmSA==','sFmmXMUNV28diWSZDW7P7WGRgxCNNA==','wf1iRl7ATXJbsGEVyIObUE7grttUphNT','Stored ','b162cf9492cb4bba5c1a6cec8b2e831e63819aca54bdf8b554b0d46ce5ec23c2','fb93c0d1be54c56b9e990a22dfc0a5ebacd8a27ef21bbc9950a31c8ed7630976','2lVSKaS0oxgrfnBmPDgrH9YxwONX5yox50RO',NULL);
+/*!40000 ALTER TABLE `emergency` ENABLE KEYS */;
+
+
+--
+-- Definition of table `udatas`
+--
+
+DROP TABLE IF EXISTS `udatas`;
+CREATE TABLE `udatas` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `userid` varchar(45) DEFAULT NULL,
+  `amount` varchar(45) DEFAULT NULL,
+  `time` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `phash` longtext,
+  `ahash` longtext,
+  `date` varchar(45) DEFAULT NULL,
+  `category` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 ROW_FORMAT=FIXED;
+
+--
+-- Dumping data for table `udatas`
+--
+
+/*!40000 ALTER TABLE `udatas` DISABLE KEYS */;
+INSERT INTO `udatas` (`id`,`userid`,`amount`,`time`,`status`,`phash`,`ahash`,`date`,`category`) VALUES 
+ (1,'IUpdoEXQ75o1UDRm5c+purcvnQ==','y2689BRxKeF1osmJT4DjXHqzO+CJ6g==','OuN+NmTiC8aCr5h6xcmZI5GI6tf5e5Lo','U6jh39PWqLjmB7ihQBO3RmaxSbjNrLIOaKa0','Stored ','Hello','ahash',NULL),
+ (2,'IzcdvOCMFMG602GIDTn0x4rqtA==','AkGgtbPky9+X8BNctXwhXRSDKj1awQ==','gnYZhEvXfRZ4EFtiayeuanSmuiUTQjIC','pJsNLOIDrA5V41bdDlYbcXFBvC8r+h3L3kcF','Stored ','','',NULL),
+ (3,'5OOZoSpGRolIXZCLQJiQv0ZxwQ==','rtfOHmtqckeEQf84vkXmlVZaVVa4+A==','0K7j6byNNKvsXtQA1jp0g7pl4SaIEEhm','Stored ','108662df383ae5bb4a751b6b4f965f7330abf84bd5a14dd34fdea83d29091ce6','68d31d8410d68fe65b04b3ec3fea2a693a34e99a8f48c4d04fa00874d9bb4151','nG+t1Yu6rAX0B7xDFEAYOsrhTUFYJXqFf9d/',NULL),
+ (4,'vU+j8Dmyg3CW8Y9k7CaO2b/JZg==','xfgOC7ajkT2H+/PhZboSOi9Yn8d8KA==','KB7cirOM68ZNd/B1tmE+wIKC0dsu8mvT','Stored ','d4a536d23951dfd249f2db03d3be7754c8d015669eed4912f0b351b2c4b11cec','fa8717bf091dd231c415e7925b9750f751b3ac88a115b17b01585ef66f6ee5be','DHCJOenA+GZZW1EwgCeN2coRPnG4WeBFcJ7B',NULL),
+ (5,'jJrlAI2FI2Efk2XZk1yFwq8nGA==','gUhtp2wVwd6ClOQrX2tLLPsGbgoE3A==','E6jCWxk3ACGgNbTw2/TSnKsLt3lBhNqO','Stored ','5908e0e83ca61ae4ce62a9138310ef80ce006753bb1df41f9ef9ad4fe3cd8357','ecd6325311918daec9111d4febad79ba5a84a89147ba6c4ff9aec5ed659886e8','a7pvb+z945BV8jJwY7m5UJVi05/3osRQXuMj',NULL),
+ (6,'9sDmbeq79vt9UpmAFy2dworxXQ==','YRaE4X8yTcgFCy4v5dYuP4Zk66NtrQ==','DfsMl1Cseg0jFT8E/bTiPIqmExws0Tt9','Stored ','0897632d868d5eca492c7f96507d8d1e94936d5b0ba8ffccb2398e525494fa9a','5745e2841d056b8740fe329a767eddc9d9f10c8c39eecca82cd923d14cecb58b','7zHfJVzKaC+kwV55hFrioAV5oSRn3y5LiUtW',NULL),
+ (7,'Kb4FG++EIpkjPilMrqjOdXfpPQ==','QTWReztxDsdl8dn1Cw2JXnhBkiLY7Q==','s1/0D9IyTfQharRnsUUszBtx4ZbrJkPj','Stored ','423b1b74cd6350012a39d30fe3b85a77e46bb84f3842c304e7d45226cfb4331b','51090273b2e068bfb6548a9e6ae0132a8a337976c272dc745cdd73d216c0d077','oqFyjY/ifl025EWs95fFSK7Ja12LjyIHE2fx',NULL),
+ (8,'Y/3LpXZ18q68OEngreuSPKFjvA==','dKGfhVYh2QU+JqKAwiIkxIVSDHGhTg==','C9O9x5KuReHT2s64n9fM4JWEZJUFunmC','Stored ','1a217b7f76b27151a661c55ef2cc6e10c26040e3a9bd8c791e94a052d19c3d47','4a736ca5298bd8c32a2e06fb97913d9c2298c28ba9031a288b722dc56a83d55c','hpLiBgLwK76kD+YVQTKsBXagQnRhMxPfnckX',NULL),
+ (9,'+1KI0xbb5nUbLtQBOcEsPmPE/A==','FebYhurABSSD3Zun+MU6YMZb81RyXw==','nDHBvTHOjjA7smBYd0NOZ8WFmE1qa+s8','Stored ','deda9fe60cb5846f0afc5e460bc3dda687573cf5245cc1605db14e22e4bba2a4','84ecf946eab08f859c9a0f6c19ff053c66c03c9ab334d8128d2545da7f8d7929','vxPal/6YIPwiDXwweBVlJPFyLPBMJtPmMpvj',NULL),
+ (10,'RD/xYE8F5qvtyRB/CzvopwS1JA==','ADDDYoO9xbCBVdiGD3kLzGF7wJV5yA==','5nDGTZEfZP6qX2f/tXdwQAI7qOraLNzt','Stored ','2e395585e31a4cc5a21856a42ebd99f4933ed2080574be143896b2ddff601f54','ce334504cc10df52cd85cfcfe2b5c5a7815bd4ddc9ecd4bcc091481b20142ed9','oPBcVZ6VeKgxhzDVuQuzwe/F38dZZgMp3V+Z',NULL),
+ (11,'Ep0zyCT2YGxgsic42LTN9vG/zg==','XWiVrEwjfUk4iTPogP6Y701zEgqk2A==','Xi8Y3YAt0ML+QNdO1HqTT4Ympl4dHdoa','Stored ','b6e002fefb57de9425d05b67b59c6ddc27b5d1fbbe01f8bccae9bdb816304c1c','5c140f8d731ff9bd25493e3417d0f3df1794fd18b09879bc62278096de4da080','CDzXlSsGb3QymbYfWOrel0wcVTIzW525aBGw',NULL),
+ (12,'zAdxb2/VuA1V6raJnbEXk91XIA==','e/uz8AGrNsukukMU1S6uf7q7GnihXQ==','kCP41ElWR1QY+HjUDjPsfK29FEJhg4rR','Stored ','911621539845cdb42db5e3b1e8e12fcb74fdc6cd10da32b516e2cd0dbe7c93f8','6d4e459a04a5e17d9092fdb7e7847305cc4e0a0daff8aab8e649783fb64fc581','juzT1oknLzqu9a+8+yYlAUO3tM7riBGjCvPw',NULL),
+ (13,'A6M6diaPfIjf1whCVnonh90cWQ==','2hJg5u830KiQj+cry3Ifvzn3KCZ4Uw==','O9ahCnwGrrYWAetuMof1W/3yccl36NLW','Stored ','09e6473a8797e6d065138dfad4ce4df6a0f33e5d95ea60d75e9e93c3670842b8','02a74289a6ad4de4546e417c42648e3f113e4c890524c41ddba176228a65ec97','Mr9doLj2+XNZPIZ6kWvXjezVPL5D/pWJbUM7',NULL),
+ (14,'5oEnKgOwNO+HMRTI4DOLDplhXQ==','26A74XGsAv2kdhU+UtcTtdp6saM=','cimssmPTOPrKhzREXSh/JiER94k6HY65','Stored ','7353857f6eea9cb1eb381748f72857eb6b6dc058564a3fc45dd2156f51e6b105','59bf3bd5f46a7639070985bb61889f434c8b9c6acf83d1fb5e1a298e413df5e5','nkKOdafK5GnNB08sSoGUP+KQT+EWp9RNUIjo',NULL),
+ (15,'pblRVRO7XwckVbC/64YjGyWPpw==','1pO+zGm/siWVRAYvTQWQtsVn+PRvUQ==','nQzLIeBzTAP3esJqo5Vzz0blHfMXc6n8','Stored ','f3c9a5ffe7c72151b875e49fdfba93485c41ff39392a7f0b66747773aef08088','cd6412f220c75e3e6328ec2356551dfec3197cafa1aa23aaa4b7be5676d4bf05','ZQE6I8Wa8N9JBstFz5/skuJykgMGUtNGfgAj',NULL),
+ (16,'Q1Jcquk8Bn57Z7Kg2XDl4RkX8g==','kKMNNfM310TsIWgmg6jnbL+Zv+mWEw==','/6nuL5ETmrfgiqPr2boeG4J+DjEHeNkj','Stored ','fb3bc27fda67a502faf87ea040f78a77b292a5be789a034e7166207d9185b4c0','e7943133b97a45080ffcad0db83acca0cc5a72085783505619fe41688510ac5b','qEdipDWrzwEcCBJ5qExhTkP0OEaSeSkuIFht',NULL),
+ (17,'jykcxSDJPc6/n/k5C9iS27mUKg==','dJiQMn+OjhxPEkUoD0ufP17s+ivlFg==','C9SxBw8M2izMKfVvGE5oXIGrvQTptLbd','Stored ','e4c173d798f47399f308188f7beb276e03083fd83ff3a329c36cf9d2a8be1c44','72ad854942455037e975ee5e4de4fd917e94645873a70ac813d847aa6cf17369','Pt6ZEjcPzHKs7Uwaf/6PZfw1DAAr3sYhzLCQ',NULL),
+ (18,'HHfaM8w6U9sCQ0UxsIT1Z97b6w==','72WgWQJt2G/dP0ZTbgTrY/zzWsMULw==','iLB8KWZ1tlKmFIOClYzShcKFMJTEZEYU','Stored ','1f9c92922a64041a51a8f3b90cccb98f0149d5625f9fb4b7edfa660bcd2b4b5d','57703d6e689e40c28f843d747b62755da9853239b93c7109f99e1efa7239bc09','/FMXgIZN3LGBk7QCa30KL1RGkg6vGji2tMkB',NULL),
+ (19,'7R2VloK9hghzKOT4M7Rm0Jwy1A==','ZEaMwDkPfhzzstosaL0pBMYhEhY50w==','OeXZGu3aPSabWBUKyll6j/EPvyVq+gMs','Stored ','6128cb5b93eec2d302b59b7b5f7453e26e3abcef9bcb37b94d9819b2d4530d18','56d71082662aaeb8311efde7f2911ff699b88be4dcadf085630a240857ac4f7d','AW5OvbjL8l4BoGkiIn+DKp8OdtXHe+KucbUl',NULL),
+ (20,'L6ewB4unUYDqbHAc9zwVINmlhQ==','g9QwMGFEAjPobL0DC02fIp8oKwMS9g==','4ZmzRjRfXTfTUQCAr8sJUsiOh++h6DOu','Stored ','4aaa5f01bd50609ec2579e505590aa4142d9e2c3f33abf0e6f6854fad0a6c0e5','979a827d9e0229e9c0d9d5d6e95d007fc36dcd33b92ce2a0b3f07f1f4ef5e0f2','qV3vvKAAhfXQx4WUfEkKu55xB5Kk4enDlETs',NULL),
+ (21,'O8OnBYMJU6KdNRD6ovCrNYDmxA==','nDo0VVH1BL/y7/8wP/9kSLEdY2oOyg==','c2NJIMz18hfZ3WqOJzce7p0mWkIAo+Q4','Stored ','3f0a0a5e7e26a41826a8d6b7045fee290cf1a8e89cf2e4e6bca6d81da7d4a5f0','44bb3cea115456fe98118d8f5d7c107dcdf9da0ed525a8abaf85a0cc0249b2ca','AAnSV2VX5nzoMBl76/WmoC2OfgHwJ3Wk0O8O',NULL),
+ (22,'Hh4ai7d5Mrz09OigteOD3tIP2g==','j/zBPLA1/qEB9C+nelbXegGBbLxjKA==','OvyF29H/T31MRfPXhcfQwJcB6Fid7mlw','Stored ','6126c465e9ab1cff345bbc6753b00a0913005e4e05335d9066e293978339cb85','deba906b8411384f0f15417b8f42ae416661232007255a966ea7870a2520b367','YYZI5QMFDFt0xKTW14o3Eir98ZZUYfjtWJcs',NULL),
+ (23,'umCkfGQFWqfPj1+f80JfpWHU8w==','e9KZkPZA/jWTZJlQvzBJ1BF5aZMZLg==','3ZsseummcLSMKN5EpajiBru+glKs6yhl','Stored ','33901293bb1e78ce126487dac01e774d58bc7fcc03dab99caeda33ebc88ca4cf','305e4aacd614d55366426af9d7218009e802d6d9e3755df79194581f18113759','W2G9nZikp8te2xrE7uv9SA3OTiqdVdjVeCSa',NULL),
+ (24,'fmeKuBlsequ0Bv955OvTHS+CJQ==','MrGmUdmObJC34YyX9IlQYK0vB3Dmwg==','RAfQLwo3F09xx6CeVMMSxF0ZbrbiP/TR','Stored ','85359eed46fe8a7dd8fe09a2cccf637ac2456074725666b1153308b0ea9011ac','8c095c2fc58db1b9a9b7b92b311efe30f960af850990fb17a00f5b6f6f42ad8c','ugZ6VIYEDgtZCalwEyDptTf/qyPI5u0kpJEB','Normal Charging '),
+ (25,'Y9Rz37X2nWc2iiipGLknucegqw==','z2EY5shm2Gdmm9b2sGyKj79ml9H0rg==','80pmw5+qSWnJ6/yON1JzBZbnjtC1Be8D','Stored ','7c1945c50e0f1f172982a0ee220f59bab982eaf2c179c5c8e63ae4c9b9ef5179','8adf22d3d9882f7b9147be43657155f5681dde43695a614219ebb332956f0392','z7QYUdzIw2DkpPQjFqqZJtANIq4NxalB52LE','Normal Charging '),
+ (26,'O5A2VI9g7avh6yVTDUHtkgzBOg==','qnqosdmEwqMVvkTf57m0z1+6AcZw/Q==','787yv4HAkvokBVqw1+SIrV0wIdPU0k1G','Stored ','48713d069c7a731b321b2ada429ab251a1ca2abd317ecea69dbf136320da1856','2a832a895baea35ae9911db29583baae058305d75479a69bde182ab4caab2de4','Ra7u3OTvZM5pRZzvm/ZfNTNfKBbAnsaocXl7','Normal Charging ');
+/*!40000 ALTER TABLE `udatas` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
